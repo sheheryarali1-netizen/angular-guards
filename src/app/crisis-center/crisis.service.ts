@@ -10,7 +10,7 @@ export class CrisisService {
 
   public getCrisis(id: number) {
     return this.getCrises().pipe(
-      map((crises) => crises.find((item) => item.id)!),
+      map((crises) => crises.find((item) => item.id === id)!),
     );
   }
 }

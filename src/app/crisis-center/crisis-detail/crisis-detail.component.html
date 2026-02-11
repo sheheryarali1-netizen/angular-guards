@@ -1,1 +1,22 @@
-<h3>Welcome to the Crisis Center Detail!</h3>
+<h3>Crisis Detail</h3>
+
+<div *ngIf="crisis$ | async as crisis" class="form-details">
+  <div>Crisis ID: {{ crisis.id }}</div>
+
+  <div class="form-group">
+    <label for="heroName">Name</label>
+
+    <input
+      type="text"
+      id="heroName"
+      [(ngModel)]="crisis.name"
+      class="form-control"
+    />
+  </div>
+
+  <div class="button-container">
+    <button class="btn btn-success" (click)="save()">Save</button>
+
+    <button class="btn btn-light" (click)="cancel()">Cancel</button>
+  </div>
+</div>

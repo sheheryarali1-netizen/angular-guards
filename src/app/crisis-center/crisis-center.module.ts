@@ -7,10 +7,16 @@ import { CrisisListComponent } from './crisis-list/crisis-list.component';
 import { CrisisService } from './crisis.service';
 import { CrisisCenterHomeComponent } from './crisis-center-home/crisis-center-home.component';
 import { CrisisDetailComponent } from './crisis-detail/crisis-detail.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [CrisisCenterComponent, CrisisListComponent, CrisisCenterHomeComponent, CrisisDetailComponent],
-  imports: [CommonModule, CrisisCenterRoutingModule],
+  declarations: [
+    CrisisCenterComponent,
+    CrisisListComponent,
+    CrisisCenterHomeComponent,
+    CrisisDetailComponent,
+  ],
+  imports: [CommonModule, CrisisCenterRoutingModule, FormsModule],
   providers: [CrisisService],
 })
 export class CrisisCenterModule {}
