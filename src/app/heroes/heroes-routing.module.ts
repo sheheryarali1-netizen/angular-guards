@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HeroesListComponent } from './heroes-list/heroes-list.component';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   {
@@ -11,7 +12,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [HeroesListComponent],
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routes), CommonModule],
   exports: [RouterModule],
 })
 export class HeroesRoutingModule {}
