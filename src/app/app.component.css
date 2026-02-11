@@ -1,0 +1,7 @@
+.links-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  padding-block: 16px;
+}
