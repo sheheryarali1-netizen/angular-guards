@@ -16,18 +16,30 @@ export class CrisisDetailComponent implements OnInit {
     private router: Router,
   ) {}
 
-  public crisis$!: Observable<Crisis>;
+  public crisis?: Crisis;
+  public editName = '';
 
   public ngOnInit() {
-    this.crisis$ = this.route.paramMap.pipe(
-      switchMap((paramMap) => {
-        const id = Number(paramMap.get('id'));
-        return this.crisisService.getCrisis(id);
-      }),
-    );
+    this.route.paramMap
+      .pipe(
+        switchMap((paramMap) => {
+          const id = Number(paramMap.get('id'));
+          return this.crisisService.getCrisis(id);
+        }),
+      )
+      .subscribe((crisis) => {
+        this.crisis = crisis;
+        this.editName = crisis.name;
+      });
   }
 
-  public save() {}
+  public save() {
+    if (this.crisis) {
+      this.crisis.name = this.editName;
+    }
+
+    this.cancel();
+  }
 
   public cancel() {
     this.router.navigate(['../']);
