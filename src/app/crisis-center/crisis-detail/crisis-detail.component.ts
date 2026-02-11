@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CrisisService } from '../crisis.service';
 import { Observable, switchMap } from 'rxjs';
 import { Crisis } from '../utils';
+import { DialogService } from '../dialog.service';
 
 @Component({
   selector: 'app-crisis-detail',
@@ -14,6 +15,7 @@ export class CrisisDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private crisisService: CrisisService,
     private router: Router,
+    public dialogService: DialogService,
   ) {}
 
   public crisis?: Crisis;
