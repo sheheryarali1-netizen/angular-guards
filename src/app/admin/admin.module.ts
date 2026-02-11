@@ -5,12 +5,14 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { ManageCrisesComponent } from './manage-crises/manage-crises.component';
 import { ManageHeroesComponent } from './manage-heroes/manage-heroes.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
     AdminDashboardComponent,
     ManageCrisesComponent,
     ManageHeroesComponent,
+    AdminComponent,
   ],
   imports: [CommonModule, AdminRoutingModule],
 })

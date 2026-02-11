@@ -1,0 +1,21 @@
+<h2>Admin</h2>
+
+<div class="links-container">
+  <a
+    routerLink="./"
+    class="btn btn-light"
+    routerLinkActive="btn-dark"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >Dashboard</a
+  >
+
+  <a routerLink="./crises" class="btn btn-light" routerLinkActive="btn-dark"
+    >Manage Crises</a
+  >
+
+  <a routerLink="./heroes" class="btn btn-light" routerLinkActive="btn-dark"
+    >Manage Heroes</a
+  >
+</div>
+
+<router-outlet></router-outlet>
