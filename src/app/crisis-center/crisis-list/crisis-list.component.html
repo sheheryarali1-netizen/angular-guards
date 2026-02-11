@@ -1,0 +1,13 @@
+<div class="list-container">
+  <div *ngFor="let crisis of crises$ | async" class="list-item">
+    <div class="list-item-id">{{ crisis.id }}</div>
+
+    <a
+      [routerLink]="['/crisis-center', crisis.id]"
+      class="text-decoration-none list-item-name"
+      >{{ crisis.name }}</a
+    >
+  </div>
+</div>
+
+<router-outlet></router-outlet>

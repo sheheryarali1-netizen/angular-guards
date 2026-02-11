@@ -2,11 +2,11 @@
 
 <div class="list-container">
   <div *ngFor="let hero of heroes$ | async" class="list-item">
-    <div class="hero-id">{{ hero.id }}</div>
+    <div class="list-item-id">{{ hero.id }}</div>
 
     <a
       [routerLink]="['/hero', hero.id]"
-      class="text-decoration-none hero-name"
+      class="text-decoration-none list-item-name"
       >{{ hero.name }}</a
     >
   </div>

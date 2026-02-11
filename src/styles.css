@@ -1,1 +1,40 @@
 @import "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css";
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 8px;
+  padding-block: 16px;
+}
+
+.list-item {
+  display: flex;
+  background-color: rgb(223, 223, 223);
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: filter 0.2s ease-in-out;
+}
+
+.list-item:hover {
+  filter: brightness(0.9);
+}
+
+.list-item-id {
+  padding-block: 12px;
+  padding-inline: 16px;
+  background-color: rgb(36, 106, 113);
+  color: white;
+  min-width: 50px;
+}
+
+.list-item-name {
+  padding-block: 12px;
+  padding-inline: 16px;
+  flex-grow: 1;
+  color: black;
+}
