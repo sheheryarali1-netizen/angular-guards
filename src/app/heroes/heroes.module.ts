@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { HeroesRoutingModule } from './heroes-routing.module';
 import { HeroService } from './hero.service';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [],
-  imports: [CommonModule, HeroesRoutingModule],
+  declarations: [HeroDetailComponent],
+  imports: [CommonModule, HeroesRoutingModule, FormsModule],
   exports: [HeroesRoutingModule],
   providers: [HeroService],
 })

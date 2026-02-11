@@ -1,0 +1,18 @@
+<h2>Hero Detail</h2>
+
+<div *ngIf="hero$ | async as hero" class="hero-details">
+  <div>Hero ID: {{ hero.id }}</div>
+
+  <div class="form-group">
+    <label for="heroName"> Name </label>
+
+    <input
+      type="text"
+      id="heroName"
+      [(ngModel)]="hero.name"
+      class="form-control"
+    />
+  </div>
+
+  <button class="btn btn-light" (click)="goBack()">Go back</button>
+</div>
