@@ -1,0 +1,11 @@
+<h2>Login</h2>
+
+<h5>Status: {{ authService.isLoggedIn ? "Logged in" : "Logged out" }}</h5>
+
+<button
+  type="button"
+  class="btn btn-primary"
+  (click)="authService.toggleLoggedIn()"
+>
+  {{ authService.isLoggedIn ? "Logout" : "Login" }}
+</button>
