@@ -13,7 +13,6 @@ import { DialogService } from '../dialog.service';
 export class CrisisDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
-    private crisisService: CrisisService,
     private router: Router,
     public dialogService: DialogService,
   ) {}
@@ -22,17 +21,11 @@ export class CrisisDetailComponent implements OnInit {
   public editName = '';
 
   public ngOnInit() {
-    this.route.paramMap
-      .pipe(
-        switchMap((paramMap) => {
-          const id = Number(paramMap.get('id'));
-          return this.crisisService.getCrisis(id);
-        }),
-      )
-      .subscribe((crisis) => {
-        this.crisis = crisis;
-        this.editName = crisis.name;
-      });
+    this.route.data.subscribe((data) => {
+      const crisis: Crisis = data['crisis'];
+      this.crisis = crisis;
+      this.editName = crisis.name;
+    });
   }
 
   public save() {

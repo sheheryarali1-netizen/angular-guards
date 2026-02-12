@@ -8,6 +8,7 @@ import { CrisisService } from './crisis.service';
 import { CrisisCenterHomeComponent } from './crisis-center-home/crisis-center-home.component';
 import { CrisisDetailComponent } from './crisis-detail/crisis-detail.component';
 import { FormsModule } from '@angular/forms';
+import { CrisisDetailResolverService } from './crisis-detail-resolver.service';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,6 @@ import { FormsModule } from '@angular/forms';
     CrisisDetailComponent,
   ],
   imports: [CommonModule, CrisisCenterRoutingModule, FormsModule],
-  providers: [CrisisService],
+  providers: [CrisisService, CrisisDetailResolverService],
 })
 export class CrisisCenterModule {}
